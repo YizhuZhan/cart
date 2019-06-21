@@ -8,7 +8,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "../css/reset.scss";
+@import "../../css/reset.scss";
 
 #tabs {
     text-align: center;

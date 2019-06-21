@@ -17,21 +17,20 @@
 </template>
 
 <script>
-import cartItem from "../Components/CartItem"
+import cartItem from "../Cart/CartItem"
 export default {
     components: {'cart-item': cartItem},
     data() {
         return {
             itemList: [{id:1}, {id:2}],
             isEdit: true,
-
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "../css/reset.scss";
+@import "../../css/reset.scss";
 
 #cart {
     padding: 69px 0 54px 0;
@@ -39,7 +38,20 @@ export default {
         text-align: center;
         font-size: 18px;
         .title {
+            position: relative;
+            background: #fff;
             margin-bottom: 41px;
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: #ccc;
+                box-sizing: border-box;
+                z-index: 0;
+            }
         }
         .checkout-title {
             display: flex;
@@ -55,10 +67,8 @@ export default {
                 padding: 0 5px;
                 &:first-child {
                     padding: 0 20px;
-                }
-                
+                }   
             }
-            
         }
     }
 }
