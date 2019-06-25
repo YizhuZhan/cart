@@ -31,10 +31,17 @@ new Vue({
 */
 
 // demo2: KInput
-import AppKInput from "../Components/KInput/App.vue"
+// import AppKInput from "../Components/KInput/App.vue"
+
+// new Vue({
+//     render: (h) => h(AppKInput)
+// }).$mount(root)
+
+
+// demo3: Notice
+import AppNotice from "../Components/notice/App.vue"
 
 new Vue({
-    render: (h) => h(AppKInput)
+    render: (h) => h(AppNotice)
 }).$mount(root)
-
 
