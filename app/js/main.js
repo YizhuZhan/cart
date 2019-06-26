@@ -39,9 +39,19 @@ new Vue({
 
 
 // demo3: Notice
-import AppNotice from "../Components/notice/App.vue"
+// import AppNotice from "../Components/notice/App.vue"
+
+// new Vue({
+//     render: (h) => h(AppNotice)
+// }).$mount(root)
+// // 将notice挂载到全局
+// import notice from "./notice/notice.js"
+// Vue.prototype.$notice = notice
+
+
+// demo4: 递归组件
+import AppRecursion from "../Components/recursion/App.vue"
 
 new Vue({
-    render: (h) => h(AppNotice)
+    render: (h) => h(AppRecursion)
 }).$mount(root)
-
