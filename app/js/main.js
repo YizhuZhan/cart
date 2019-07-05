@@ -5,7 +5,10 @@
 /* eslint-disable comma-dangle */
 import Vue from "vue"
 import ElementUI from "element-ui"
+import pageAjust from "../common/viewport.js"
+
 Vue.use(ElementUI)
+Vue.use(pageAjust)
 
 const root = document.createElement("div")
 document.body.appendChild(root)
@@ -50,8 +53,18 @@ new Vue({
 
 
 // demo4: 递归组件
-import AppRecursion from "../Components/recursion/App.vue"
+// import AppRecursion from "../Components/recursion/App.vue"
+
+// new Vue({
+//     render: (h) => h(AppRecursion)
+// }).$mount(root)
+
+
+// demo5: 城市选择
+import AppCity from "../Components/City/App.vue"
+import router from "./City/router_city.js"
 
 new Vue({
-    render: (h) => h(AppRecursion)
+    router,
+    render: (h) => h(AppCity)
 }).$mount(root)
